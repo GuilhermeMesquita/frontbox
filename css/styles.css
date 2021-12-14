@@ -2,7 +2,10 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+ 	scroll-behavior: smooth;
 }
+
+
 
 /**********************************/
 /* 0. Variáveis
@@ -149,7 +152,7 @@ p {
 /* 6. Planos
 /**********************************/
 .planos {
-	background-color: #DA97DE;
+	background-color: var(--clr-pink-light);
 }
 
 .planos-c {
@@ -159,11 +162,20 @@ p {
 }
 
 .plano {
-	border: 4px solid #63a09d;
-	margin: 0 auto;
+	border: 4px solid var(--clr-green-light);
+	margin: 15px auto;
 	text-align: center;
 	padding: 25px;
 }
+
+.plano:last-child {
+	background-color: var(--clr-green-light);
+	border: 4px solid var(--clr-pink-dark);
+	margin: 15px auto;
+	text-align: center;
+	padding: 25px;
+}
+
 
 .plano__titulo {
 	font-size: 2.5rem;
@@ -183,8 +195,70 @@ p {
 }
 
 .plano__preco__linha {
-	background-color: #63a09d;
-	width: 10%;
+	background-color: var(--clr-green-light);
+	width: 9%;
+	margin-top: -2%;
+}
+
+.plano-lista {
+	text-align: center;
+}
+
+.plano-lista__item {
+margin: 10px 0;
+font-style: italic;
+display: flex;
+align-items: center;
+}
+
+.plano-lista__item::before {
+	background-color: var(--clr-green-light);
+	border-radius: 5px;
+	content: "";
+	display: block;
+	height: 5px;
+	margin-right: 5px;
+	width: 5px;
+}
+
+.plano:nth-child(3) .plano-lista__item::before {
+	background-color: var(--clr-green-dark);
+	border-radius: 5px;
+	content: "";
+	display: block;
+	height: 5px;
+	margin-right: 5px;
+	width: 5px;
+}
+
+.plano__comprar {
+	background-color: var(--clr-pink-light);
+	border: 5px solid var(--clr-green-light);
+	cursor: pointer;
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 4%;
+}
+
+.plano:nth-child(3) button {
+	background-color: var(--clr-green-light);
+	border: 5px solid var(--clr-pink-dark);
+	cursor: pointer;
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 4%;
+}
+
+@media  (max-width: 800px){
+	.plano:nth-child(3){
+		order: -2;
+	}
+	.plano:nth-child(2){
+		order: -1;
+	}
+	.plano:nth-child(1){
+		order: 0;
+	}
 }
 /**********************************/
 /* 7. Vantagens

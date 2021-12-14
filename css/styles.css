@@ -148,7 +148,44 @@ p {
 /**********************************/
 /* 6. Planos
 /**********************************/
+.planos {
+	background-color: #DA97DE;
+}
 
+.planos-c {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.plano {
+	border: 4px solid #63a09d;
+	margin: 0 auto;
+	text-align: center;
+	padding: 25px;
+}
+
+.plano__titulo {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.plano__preco {
+	font-size: 2.5rem;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	margin: 15px 0 0 0;
+}
+
+.plano__preco > sup {
+	font-size: 1.5rem;
+}
+
+.plano__preco__linha {
+	background-color: #63a09d;
+	width: 10%;
+}
 /**********************************/
 /* 7. Vantagens
 /**********************************/

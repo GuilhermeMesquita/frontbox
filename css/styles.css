@@ -153,12 +153,17 @@ p {
 /**********************************/
 .planos {
 	background-color: var(--clr-pink-light);
+	margin: 0 auto;
+	display: grid;
+	justify-content: center;
+	align-items: center;
 }
 
 .planos-c {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	
 }
 
 .plano {
@@ -166,12 +171,14 @@ p {
 	margin: 15px auto;
 	text-align: center;
 	padding: 25px;
+	margin-left: 20px;
+	width: 280px;
+	margin: 20px 20px;
 }
 
 .plano:last-child {
 	background-color: var(--clr-green-light);
 	border: 4px solid var(--clr-pink-dark);
-	margin: 15px auto;
 	text-align: center;
 	padding: 25px;
 }
